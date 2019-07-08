@@ -50,3 +50,11 @@ console.log(numArr, numArr2);
 console.log(boolArr, boolArr2);
 console.log(strNumTuple);
 console.log(myVoid);
+
+
+// custom types
+type person = {firstName: string};
+
+const customType: person = {firstName: 'Dollan'};
+
+customType.firstName = 'Dylan';
