@@ -3,6 +3,7 @@ export class Person {
   middleName: string;
   lastName: string;
 
+  // ? means optional
   constructor(data?: any) {
     this.firstName = data.firstName || 'Dylan';
     this.lastName = data.lastName || 'Israel';

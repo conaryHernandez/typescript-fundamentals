@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var Person = /** @class */ (function () {
+    // ? means optional
     function Person(data) {
         this.firstName = data.firstName || 'Dylan';
         this.lastName = data.lastName || 'Israel';
