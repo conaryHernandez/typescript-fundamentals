@@ -15,6 +15,12 @@ let strArr2: Array<string>;
 let numArr2: Array<number>;
 let boolArr2: Array<boolean>;
 
+const example1: string[] = ['Hello World'];
+
+const example2: (number | boolean)[] = [1, 2, true];
+
+const example3: boolean[][] = [ [true, false] ] ;
+
 // tuple
 let strNumTuple: [string, number];
 
