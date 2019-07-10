@@ -35,3 +35,33 @@ mySearch = function (source, subString) {
     return result > -1;
 };
 console.log('testing function types', mySearch('hola', 'ol'));
+var myArray;
+myArray = ["Bob", "Fred"];
+var myStr = myArray[0];
+function createClock(ctor, hour, minute) {
+    console.log('ctor', ctor);
+    return new ctor(hour, minute);
+}
+var DigitalClock = /** @class */ (function () {
+    function DigitalClock(h, m) {
+    }
+    DigitalClock.prototype.tick = function () {
+        console.log("beep beep");
+    };
+    return DigitalClock;
+}());
+var AnalogClock = /** @class */ (function () {
+    function AnalogClock(h, m) {
+    }
+    AnalogClock.prototype.tick = function () {
+        console.log("tick tock");
+    };
+    return AnalogClock;
+}());
+var digital = createClock(DigitalClock, 12, 17);
+var analog = createClock(AnalogClock, 7, 32);
+console.log('digital', digital);
+var square = {};
+square.color = "blue";
+square.sideLength = 10;
+square.penWidth = 5.0;

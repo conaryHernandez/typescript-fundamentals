@@ -90,3 +90,70 @@ mySearch = function(source: string, subString: string) {
 }
 
 console.log('testing function types', mySearch('hola', 'ol'));
+
+// Indexable Types
+
+interface StringArray {
+    [index: number]: string;
+}
+
+let myArray: StringArray;
+myArray = ["Bob", "Fred"];
+
+let myStr: string = myArray[0];
+
+// Implementing an interface #
+
+
+interface ClockConstructor {
+  new (hour: number, minute: number): ClockInterface;
+}
+interface ClockInterface {
+  tick(): void; //  methods in an interface that are implemented in the class
+	method?(): void;
+}
+
+function createClock(ctor: ClockConstructor, hour: number, minute: number): ClockInterface {
+  console.log('ctor', ctor);
+
+  return new ctor(hour, minute);
+}
+
+class DigitalClock implements ClockInterface {
+  constructor(h: number, m: number) { }
+  tick() {
+    console.log("beep beep");
+  }
+}
+class AnalogClock implements ClockInterface {
+  constructor(h: number, m: number) { }
+  tick() {
+    console.log("tick tock");
+  }
+}
+
+let digital = createClock(DigitalClock, 12, 17);
+let analog = createClock(AnalogClock, 7, 32);
+
+console.log('digital', digital);
+
+// Extending Interfaces #
+
+interface Shape {
+  color: string;
+}
+
+interface PenStroke {
+  penWidth: number;
+}
+
+interface Square extends Shape, PenStroke {
+  sideLength: number;
+  name: string;
+}
+
+let square = {} as Square;
+square.color = "blue";
+square.sideLength = 10;
+square.penWidth = 5.0;
+
