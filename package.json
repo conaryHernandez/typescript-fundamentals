@@ -1,0 +1,23 @@
+{
+  "name": "typescript-sandbox",
+  "version": "1.0.0",
+  "description": "Remember to install Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conaryHernandez/typescript-sandbox.git"
+  },
+  "author": "Conary Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conaryHernandez/typescript-sandbox/issues"
+  },
+  "homepage": "https://github.com/conaryHernandez/typescript-sandbox#readme",
+  "devDependencies": {
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}
