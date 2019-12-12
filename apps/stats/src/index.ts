@@ -5,10 +5,10 @@ import { HtmlReports } from './reportTargets/HtmlReports';
 import { WinsAnalysis } from './analyzers/WinsAnalysis';
 import { Summary } from './Summary';
 
-const csvFileReader = new CsvFileReader('football.csv');
-const matchReader = new MatchReader(csvFileReader);
+const matchReader = MatchReader.fromCsv('football.csv');
 matchReader.load();
 
-const summary = new Summary(new WinsAnalysis('Man United'), new HtmlReports());
+// const summary = new Summary(new WinsAnalysis('Man United'), new HtmlReports());
+const summary = Summary.winsAnalysisWithHtmlReport('Man United');
 
 summary.buildAndPrintReport(matchReader.matches);
