@@ -1,10 +1,8 @@
 import { User } from './models/User';
 import axios from 'axios';
 
-const user = new User({ name: 'Conary', age: 24 });
+const user = new User({ name: 'new record', age: 0 });
 
-user.on('change', () => {
-  console.log('Change #1');
-});
+// user.set({ name: 'pedrito', age: 99 });
 
-axios.get('http://localhost:3000/users/1');
+user.save();
